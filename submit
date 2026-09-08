@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Submit — The Cardboard Box</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background-color: #5A0F18;
+            color: #F4EBDD;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 28px 6%;
+
+            border-bottom: 1px solid rgba(244, 235, 221, 0.35);
+        }
+
+        .nav-logo {
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+
+        /* MAIN */
+
+        main {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 100px 7%;
+        }
+
+        .label {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        h1 {
+            margin: 20px 0 30px;
+
+            font-size: clamp(55px, 9vw, 100px);
+            font-weight: normal;
+            line-height: 0.95;
+            letter-spacing: -3px;
+        }
+
+        .intro {
+            max-width: 650px;
+
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+
+        /* GUIDELINES */
+
+        .guidelines {
+            margin-top: 90px;
+
+            border-top: 1px solid rgba(244, 235, 221, 0.35);
+        }
+
+        .guideline {
+            padding: 30px 0;
+
+            border-bottom: 1px solid rgba(244, 235, 221, 0.35);
+        }
+
+        .guideline h2 {
+            margin: 0 0 12px;
+
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        .guideline p {
+            max-width: 700px;
+
+            margin: 0;
+
+            font-size: 16px;
+            line-height: 1.7;
+
+            opacity: 0.85;
+        }
+
+
+        /* FORM AREA */
+
+        .form-section {
+            margin-top: 100px;
+
+            padding: 55px;
+
+            background-color: #F4EBDD;
+            color: #5A0F18;
+        }
+
+        .form-section h2 {
+            margin-top: 0;
+
+            font-size: 40px;
+            font-weight: normal;
+        }
+
+        .form-section p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .form-button {
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding: 15px 30px;
+
+            border: 1px solid #5A0F18;
+
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            transition: all 0.25s ease;
+        }
+
+        .form-button:hover {
+            background-color: #5A0F18;
+            color: #F4EBDD;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            padding: 50px 7%;
+
+            border-top: 1px solid rgba(244, 235, 221, 0.35);
+
+            display: flex;
+            justify-content: space-between;
+
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 18px;
+            }
+
+            main {
+                padding-top: 70px;
+            }
+
+            h1 {
+                font-size: 60px;
+            }
+
+            .form-section {
+                padding: 30px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="nav-logo">
+            <a href="index.html">The Cardboard Box</a>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="submit.html">Submit</a>
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+        <div class="label">
+            Submissions
+        </div>
+
+        <h1>
+            Open the box.
+        </h1>
+
+        <p class="intro">
+            A journal for young, emerging writers.
+            If you've got something you've been keeping tucked away,
+            we'd love to read it.
+        </p>
+
+
+        <!-- GUIDELINES -->
+
+        <section class="guidelines">
+
+            <div class="guideline">
+
+                <h2>Who can submit?</h2>
+
+                <p>
+                    The Cardboard Box is open to young and emerging writers.
+                    You don't need to have been published before.
+                </p>
+
+            </div>
+
+
+            <div class="guideline">
+
+                <h2>What do we accept?</h2>
+
+                <p>
+                    We accept poetry, fiction, creative nonfiction,
+                    personal essays, and other forms of creative writing.
+                </p>
+
+            </div>
+
+
+            <div class="guideline">
+
+                <h2>How long can my submission be?</h2>
+
+                <p>
+                    Short stories and essays should generally be under
+                    5,000 words. Poetry submissions may contain up to
+                    five poems.
+                </p>
+
+            </div>
+
+
+            <div class="guideline">
+
+                <h2>What should I send?</h2>
+
+                <p>
+                    Please submit your work as a PDF or Word document.
+                    Include your name, email address, the title of your
+                    work, and a short biography.
+                </p>
+
+            </div>
+
+
+            <div class="guideline">
+
+                <h2>Is there a submission fee?</h2>
+
+                <p>
+                    No. Submissions to The Cardboard Box are completely free.
+                </p>
+
+            </div>
+
+
+            <div class="guideline">
+
+                <h2>What happens after I submit?</h2>
+
+                <p>
+                    Every submission will be read by our editorial team.
+                    If we decide to publish your work, we'll contact you
+                    using the email address provided.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUBMISSION FORM -->
+
+        <section class="form-section">
+
+            <h2>
+                Ready to share?
+            </h2>
+
+            <p>
+                Fill out our submission form and send us the piece
+                you've been keeping in your cardboard box.
+            </p>
+
+            <!-- WE WILL PUT YOUR GOOGLE FORM LINK HERE -->
+
+            <a
+                class="form-button"
+                href="PASTE-YOUR-GOOGLE-FORM-LINK-HERE"
+                target="_blank">
+                Submit Your Work
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div>
+            The Cardboard Box
+        </div>
+
+        <div>
+            © 2026
+        </div>
+
+    </footer>
+
+</body>
+</html>
