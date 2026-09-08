@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Cardboard Box</title>
+
+    <style>
+        /* =========================
+           GENERAL
+           ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background-color: #5A0F18;
+            color: #F4EBDD;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVIGATION
+           ========================= */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 28px 6%;
+
+            border-bottom: 1px solid rgba(244, 235, 221, 0.35);
+        }
+
+        .nav-logo {
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+
+        /* =========================
+           HERO
+           ========================= */
+
+        .hero {
+            min-height: 80vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 80px 25px;
+        }
+
+        .hero h1 {
+            margin: 0;
+
+            font-size: clamp(65px, 12vw, 150px);
+            font-weight: normal;
+            line-height: 0.9;
+            letter-spacing: -5px;
+        }
+
+        .hero-subtitle {
+            max-width: 600px;
+
+            margin-top: 45px;
+
+            font-size: 21px;
+            line-height: 1.6;
+        }
+
+        .hero-description {
+            max-width: 500px;
+
+            margin-top: 20px;
+
+            font-size: 16px;
+            line-height: 1.7;
+
+            opacity: 0.8;
+        }
+
+        .submit-button {
+            display: inline-block;
+
+            margin-top: 40px;
+
+            padding: 15px 30px;
+
+            border: 1px solid #F4EBDD;
+
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            transition: all 0.25s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #F4EBDD;
+            color: #5A0F18;
+        }
+
+
+        /* =========================
+           DIVIDER
+           ========================= */
+
+        .divider {
+            width: 88%;
+            height: 1px;
+
+            margin: 0 auto;
+
+            background-color: rgba(244, 235, 221, 0.35);
+        }
+
+
+        /* =========================
+           ABOUT SECTION
+           ========================= */
+
+        .about {
+            max-width: 1000px;
+
+            margin: 0 auto;
+
+            padding: 120px 7%;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 80px;
+        }
+
+        .section-label {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            opacity: 0.7;
+        }
+
+        .about h2 {
+            margin-top: 0;
+
+            font-size: 48px;
+            font-weight: normal;
+            line-height: 1;
+        }
+
+        .about-text {
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           SUBMISSIONS SECTION
+           ========================= */
+
+        .submissions {
+            padding: 120px 7%;
+
+            text-align: center;
+        }
+
+        .submissions h2 {
+            margin: 20px 0;
+
+            font-size: 55px;
+            font-weight: normal;
+        }
+
+        .submissions p {
+            max-width: 600px;
+
+            margin: 0 auto;
+
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           FOOTER
+           ========================= */
+
+        footer {
+            padding: 50px 7%;
+
+            border-top: 1px solid rgba(244, 235, 221, 0.35);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 18px;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            .hero h1 {
+                font-size: 65px;
+                letter-spacing: -3px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about h2 {
+                font-size: 40px;
+            }
+
+            .submissions h2 {
+                font-size: 42px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="nav-logo">
+            The Cardboard Box
+        </div>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#submissions">Submit</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HERO / WELCOME -->
+
+    <section class="hero">
+
+        <h1>
+            The<br>
+            Cardboard<br>
+            Box
+        </h1>
+
+        <p class="hero-subtitle">
+            A journal for young, emerging writers.
+        </p>
+
+        <p class="hero-description">
+            Undust the cardboard box of writing in your closet
+            and share your stories.
+        </p>
+
+        <a class="submit-button" href="#submissions">
+            Submit Your Work
+        </a>
+
+    </section>
+
+
+    <div class="divider"></div>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div>
+            <div class="section-label">
+                About
+            </div>
+        </div>
+
+        <div>
+            <h2>
+                What's inside the box?
+            </h2>
+
+            <p class="about-text">
+                The Cardboard Box is a literary journal for young,
+                emerging writers. We believe that the stories sitting
+                unfinished in notebooks, buried in computer folders,
+                and collecting dust in bedroom closets deserve to be read.
+            </p>
+
+            <p class="about-text">
+                Fiction, poetry, essays, strange little pieces of writing—
+                if you've written it, we want to see it.
+            </p>
+        </div>
+
+    </section>
+
+
+    <div class="divider"></div>
+
+
+    <!-- SUBMISSIONS -->
+
+    <section class="submissions" id="submissions">
+
+        <div class="section-label">
+            Submissions
+        </div>
+
+        <h2>
+            Open the box.
+        </h2>
+
+        <p>
+            Have something you've been keeping to yourself?
+            Send it our way. We're looking for fresh voices,
+            unusual ideas, beautiful sentences, and stories
+            that deserve a place outside your closet.
+        </p>
+
+        <a class="submit-button" href="#">
+            Submit Your Work
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer id="contact">
+
+        <div>
+            The Cardboard Box
+        </div>
+
+        <div>
+            © 2026
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
